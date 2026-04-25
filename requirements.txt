@@ -1,1 +1,1 @@
-markitdown["pdf","docx"]
+markitdown[pdf,docx,pptx]
