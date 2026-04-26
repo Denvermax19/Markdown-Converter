@@ -2,9 +2,6 @@
 
 A sleek, rapid-prototyped web tool built with **Python**, **Streamlit**, and **Microsoft's MarkItDown** library.
 
-## 🔗 Live Demo
-Check out the live tool here: **[Insert Your Streamlit Cloud URL Here]**
-
 ---
 
 ## ✨ Features
@@ -19,7 +16,7 @@ If you want to run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone 
+    git clone https://github.com/Denvermax19/Markdown-Converter.git
     cd markdown-converter
     ```
 
@@ -40,7 +37,14 @@ If you want to run this project locally, follow these steps:
 2.  **Convert:** Click the **"Convert to Markdown"** button. The tool will process the file using the MarkItDown engine.
 3.  **Download:** Once the conversion is finished, a download button will appear. Click it to save your new `.md` file.
 
+## Upcoming Features
+1. Images (OCR and llm based description)
+2. Audio (speech transcription)
+
 ## 📦 Dependencies
 The tool relies on the following major libraries:
 *   [Streamlit](https://streamlit.io/): For the user interface.
 *   [MarkItDown](https://github.com/microsoft/markitdown): Microsoft's library for converting various files to Markdown.
+
+## 🔗 Live Demo
+Check out the live tool here: [Markdown Converter](azor-markdown-converter.streamlit.app)
