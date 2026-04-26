@@ -47,4 +47,4 @@ The tool relies on the following major libraries:
 *   [MarkItDown](https://github.com/microsoft/markitdown): Microsoft's library for converting various files to Markdown.
 
 ## 🔗 Live Demo
-Check out the live tool here: [Markdown Converter](azor-markdown-converter.streamlit.app)
+Check out the live tool here: [Markdown Converter](https://azor-markdown-converter.streamlit.app/)
