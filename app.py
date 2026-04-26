@@ -24,8 +24,6 @@ def main():
                     f.write(uploaded_file.getbuffer())
                 result = md.convert(file_path)
                 output_path = Path(f"outputs/{uploaded_file.name.replace('.pdf', '.md')}")
-                Path(output_path).write_text(result.text_content, encoding='utf-8')
-                st.success(f"✓ File converted successfully! Output saved to: {output_path}")
             
             elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
                 file_path = Path(f"documents/{uploaded_file.name}")
@@ -33,19 +31,23 @@ def main():
                     f.write(uploaded_file.getbuffer())
                 result = md.convert(file_path)
                 output_path = Path(f"outputs/{uploaded_file.name.replace('.docx', '.md')}")
-                Path(output_path).write_text(result.text_content, encoding='utf-8')
-                st.success(f"✓ File converted successfully!")
         
         except Exception as e:
             st.error(f"Error converting file: {e}")
 
 
-        if result and output_path.exists():        
+        if result:
+                if st.button("Convert to Markdown",type="primary",use_container_width=True):
+                    Path(output_path).write_text(result.text_content, encoding="utf-8")
+                    st.success("File converted successfully!")
+                        
                 st.download_button(
                     label="Download Markdown File",
                     data=result.text_content,
                     file_name=output_path.name,
-                    mime="text/markdown"
+                    mime="text/markdown",
+                    type="primary",
+                    use_container_width=True
                 )
         
 
